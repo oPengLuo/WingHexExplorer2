@@ -75,5 +75,10 @@ CMakeLists.txt.user*
 *.dll
 *.exe
 
-#VSCode
+# VSCode
 .vscode/
+
+# JetBrains IDEs
+.idea
+cmake-build-release*
+cmake-build-debug*

@@ -17,6 +17,10 @@ int main(int argc, char *argv[]) {
 #endif
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
+    /* 避免高分屏工具栏图标太大 */
+#if (QT_VERSION >= QT_VERSION_CHECK(6,0,0))
+    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::Floor);
+#endif
 
     QApplication::setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
 
